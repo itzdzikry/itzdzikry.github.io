@@ -1467,7 +1467,7 @@ section,
 /*--------------------------------------------------------------
 # Register Section
 --------------------------------------------------------------*/
-
+/* General styling */
 #register {
   background-color: #f8f9fa;
   padding: 50px 0;
@@ -1484,19 +1484,19 @@ section,
 /* Tabs styling */
 #register .nav-tabs {
   justify-content: center;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid var(--bs-primary);
   flex-wrap: wrap;
 }
 
 #register .nav-tabs .nav-link {
-  color: #007bff;
+  color: var(--bs-primary);
   font-weight: 600;
   border: none;
   padding: 10px 20px;
 }
 
 #register .nav-tabs .nav-link.active {
-  background-color: #007bff;
+  background-color: var(--bs-primary);
   color: #fff;
   border-radius: 5px;
 }
@@ -1519,16 +1519,14 @@ section,
 }
 
 #register .bg-primary-subtle {
-  background-color: #cfe2ff;
+  background-color: var(--bs-primary-bg-subtle);
   font-weight: bold;
 }
 
 /* Responsive Table */
 @media (max-width: 768px) {
-  #register .table td {
-    display: block;
-    width: 100%;
-    text-align: center;
+  #register .table-responsive {
+    overflow-x: auto;
   }
 }
 
@@ -1565,16 +1563,7 @@ section,
   border-radius: 8px;
 }
 
-#register .payment-details .bg-primary-subtle {
-  background-color: #cfe2ff;
-  font-weight: bold;
-}
-
 @media (max-width: 768px) {
-  #register .payment-details {
-    flex-direction: column;
-  }
-
   #register .payment-details div {
     flex-direction: column;
     text-align: center;
@@ -1584,18 +1573,18 @@ section,
 /* Warning box */
 #register .warn-icons i {
   font-size: 24px;
-  background-color: #dc3545;
+  background-color: var(--bs-danger);
   color: #fff;
   padding: 10px;
   border-radius: 50%;
 }
 
 #register .bg-danger-subtle {
-  background-color: #f8d7da;
+  background-color: var(--bs-danger-bg-subtle);
   border-radius: 8px;
   padding: 15px;
   font-weight: bold;
-  color: #721c24;
+  color: var(--bs-danger-text);
   text-align: center;
 }
 
@@ -1637,6 +1626,7 @@ section,
     font-size: 14px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Venue Section
