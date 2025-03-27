@@ -1333,6 +1333,10 @@ section,
   /* Bayangan lebih kuat saat hover */
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .section-title {
   max-width: 800px;
   margin: auto;
