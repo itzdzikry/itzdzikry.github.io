@@ -1283,7 +1283,7 @@ section,
     /* Mencegah elemen turun ke bawah */
     justify-content: center;
     /* Agar tetap rapi di tengah */
-    gap: 10px;
+    gap: 5px;
     /* Jarak antar elemen */
   }
 
@@ -1297,12 +1297,12 @@ section,
   }
 
   .countdown-box {
-    font-size: 1.8rem;
-    /* Sedikit mengecilkan ukuran font agar muat di layar kecil */
-    padding: 12px 18px;
-    /* Menyesuaikan padding */
-    min-width: 60px;
-    /* Ukuran minimal agar tidak terlalu besar */
+    font-size: 1.5rem;
+    /* Mengecilkan ukuran font lebih lanjut */
+    padding: 8px 12px;
+    /* Mengurangi padding agar tidak terlalu besar */
+    min-width: 50px;
+    /* Mengurangi ukuran minimal kotak */
   }
 
   .countdown-label {
