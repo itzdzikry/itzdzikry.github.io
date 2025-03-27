@@ -1333,8 +1333,26 @@ section,
   /* Bayangan lebih kuat saat hover */
 }
 
+.text-with-image {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Jarak antara gambar dan teks */
+}
+
+.image-left {
+  width: 370px;
+  /* Ukuran gambar lebih kecil */
+  height: auto;
+  border-radius: 8px;
+  /* Opsional, untuk tampilan lebih halus */
+}
+
 .text-justify {
   text-align: justify;
+  max-width: 800px;
+  font-size: 18px;
+  /* Sesuaikan ukuran font */
 }
 
 .section-title {
@@ -1426,6 +1444,21 @@ h3.text-light.fw-bold {
 h4.text-success.fw-bold.fst-italic.display-8 {
   color: #4d0ab9 !important;
   /* Warna biru tua */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .text-with-image {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-left {
+    width: 100%;
+    max-width: 250px;
+    /* Gambar lebih kecil pada layar kecil */
+    margin-bottom: 15px;
+  }
 }
 
 /*--------------------------------------------------------------
