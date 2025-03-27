@@ -1209,92 +1209,105 @@ section,
 /*--------------------------------------------------------------
 # Countdown Section - Responsive
 --------------------------------------------------------------*/
-.countdown-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  margin-top: 20px;
+
+/* Countdown Section */
+#countdown {
+  background: linear-gradient(135deg, #0f1013, #0f0d25);
+  /* Gradasi biru */
   color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
-.countdown-container {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(40, 40, 40, 0.9));
-  backdrop-filter: blur(10px);
+/* Styling untuk countdown-wrapper */
+.countdown-wrapper {
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Styling teks utama */
+.countdown-wrapper h2 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #dddddd;
+  /* Warna putih lebih soft */
+}
+
+/* Menjadikan countdown horizontal */
+.countdown-container {
+  display: table;
   margin: 0 auto;
 }
 
-.countdown {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
+/* Styling untuk item countdown */
 .countdown-item {
-  text-align: center;
-  flex: 1;
-  min-width: 80px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 15px;
 }
 
+/* Kotak angka countdown */
 .countdown-box {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 10px;
-  min-width: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  /* Transparan */
+  padding: 20px 30px;
+  border-radius: 15px;
+  min-width: 90px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.countdown-box:hover {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.3);
-}
-
+/* Styling label (Days, Hours, Minutes, Seconds) */
 .countdown-label {
-  font-size: 0.9rem;
+  display: block;
+  font-size: 1rem;
   margin-top: 5px;
-  color: #ddd;
+  color: #f0f0f0;
 }
 
-/* Responsive untuk layar kecil */
+/* Responsif untuk layar kecil */
 @media (max-width: 600px) {
-  .countdown {
-    flex-direction: row;
+  .countdown-container {
+    display: flex;
+    /* Mengubah menjadi flex agar tetap horizontal */
+    flex-wrap: nowrap;
+    /* Mencegah elemen turun ke bawah */
     justify-content: center;
+    /* Agar tetap rapi di tengah */
     gap: 10px;
+    /* Jarak antar elemen */
   }
 
   .countdown-item {
-    min-width: 70px;
+    display: flex;
+    /* Membuat item tetap dalam satu baris */
+    flex-direction: column;
+    /* Label tetap di bawah angka */
+    align-items: center;
+    /* Agar rapi di tengah */
   }
 
   .countdown-box {
-    font-size: 1.5rem;
-    padding: 10px;
-    min-width: 60px;
+    font-size: 1.8rem;
+    /* Sedikit mengecilkan ukuran font agar muat di layar kecil */
+    padding: 12px 18px;
+    /* Menyesuaikan padding */
+    min-width: 70px;
+    /* Ukuran minimal agar tidak terlalu besar */
   }
 
   .countdown-label {
-    font-size: 0.8rem;
-  }
-
-  .countdown-container {
-    padding: 20px;
+    font-size: 0.85rem;
+    /* Mengecilkan ukuran label */
   }
 }
 
@@ -1342,11 +1355,31 @@ section,
   -webkit-text-fill-color: transparent;
 }
 
+/* Pastikan kontainer menggunakan flex agar tinggi content seragam */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  /* Menyamakan tinggi semua elemen */
+}
+
+/* Styling untuk content */
 .content {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  /* Memastikan isi tetap rapi */
+  justify-content: space-between;
+  /* Jika ada tombol di bawah, tetap rata */
+  flex: 1;
+  /* Membantu menyamakan tinggi */
+  min-height: 200px;
+  /* Sesuaikan dengan kebutuhan */
 }
 
 .content:hover {
@@ -1378,14 +1411,17 @@ section,
 }
 
 .gradient-bg-3 {
-  background: linear-gradient(135deg, #ffc107, #ffecb3);
+  background: linear-gradient(135deg, #d39f04, #ebcb6c);
 }
 
-.h3 {
-  font-size: 1.2rem;
-  border: 2px solid #000;
-  padding: 5px;
-  text-align: left;
+h3.text-light.fw-bold {
+  font-size: 1.3rem;
+  /* Sesuaikan dengan kebutuhan */
+}
+
+h4.text-success.fw-bold.fst-italic.display-8 {
+  color: #4d0ab9 !important;
+  /* Warna biru tua */
 }
 
 /*--------------------------------------------------------------
@@ -1803,8 +1839,11 @@ section,
 # Sponsors Section
 --------------------------------------------------------------*/
 .sponsors .clients-wrap {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* Tambahkan jarak antar sponsor */
 }
 
 .sponsors .client-logo {
