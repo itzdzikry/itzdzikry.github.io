@@ -1455,7 +1455,7 @@ h4.text-success.fw-bold.fst-italic.display-8 {
 
   .image-left {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     /* Gambar lebih kecil pada layar kecil */
     margin-bottom: 15px;
   }
