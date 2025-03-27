@@ -814,6 +814,19 @@ h6 {
   text-decoration: none;
 }
 
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .footer-about img {
+    max-width: 80%;
+    /* Menyesuaikan lebar logo agar lebih fleksibel */
+    height: auto;
+    /* Menjaga aspek rasio */
+    display: block;
+    margin: 0 auto;
+    /* Menjaga logo tetap di tengah */
+  }
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
