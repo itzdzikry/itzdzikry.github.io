@@ -1115,6 +1115,12 @@ section,
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .hero h2 span {
+    white-space: nowrap;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Speakers Section
