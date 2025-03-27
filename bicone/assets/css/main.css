@@ -1116,8 +1116,30 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+    /* Ukuran lebih kecil untuk layar HP */
+    line-height: 32px;
+  }
+
   .hero h2 span {
     white-space: nowrap;
+    /* Pastikan tetap satu baris */
+    font-size: 24px;
+    /* Ukuran teks menyesuaikan */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+    /* Lebih kecil untuk layar sangat kecil */
+    line-height: 28px;
+  }
+
+  .hero h2 span {
+    font-size: 20px;
+    /* Sesuaikan ukuran teks */
   }
 }
 
