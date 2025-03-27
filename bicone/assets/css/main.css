@@ -1117,7 +1117,7 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 28px;
+    font-size: 26px;
     /* Ukuran lebih kecil untuk layar HP */
     line-height: 32px;
   }
