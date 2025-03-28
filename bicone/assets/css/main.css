@@ -90,7 +90,6 @@ a:hover {
 }
 
 
-
 .warn-icons {
   width: 30px;
   height: 30px;
@@ -1014,6 +1013,8 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -1117,7 +1118,7 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 28px;
+    font-size: 30px;
     /* Ukuran lebih kecil untuk layar HP */
     line-height: 34px;
   }
@@ -1144,7 +1145,7 @@ section,
   }
 
   .hero h2 span {
-    font-size: 22px;
+    font-size: 28px;
     /* Sesuaikan ukuran teks */
   }
 
